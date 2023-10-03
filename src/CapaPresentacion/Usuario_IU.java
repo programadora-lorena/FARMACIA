@@ -316,6 +316,11 @@ public class Usuario_IU extends javax.swing.JInternalFrame {
                 txtBuscarApellidosFocusLost(evt);
             }
         });
+        txtBuscarApellidos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtBuscarApellidosKeyPressed(evt);
+            }
+        });
 
         Tabla_Reporte_Usuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -351,8 +356,18 @@ public class Usuario_IU extends javax.swing.JInternalFrame {
                 cmbTipoActionPerformed(evt);
             }
         });
+        cmbTipo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                cmbTipoKeyPressed(evt);
+            }
+        });
 
         cmbTienda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PRINCIPAL" }));
+        cmbTienda.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                cmbTiendaKeyPressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -732,8 +747,8 @@ public class Usuario_IU extends javax.swing.JInternalFrame {
     private void txtCelularKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCelularKeyPressed
         // TODO add your handling code here:
          if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            btnRegistrar.requestFocus();
-            btnRegistrar.doClick();
+            cmbTipo.requestFocus();
+           
         }
     }//GEN-LAST:event_txtCelularKeyPressed
 
@@ -806,6 +821,43 @@ public class Usuario_IU extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         txtBuscarApellidos.setBackground(Color.white);
     }//GEN-LAST:event_txtBuscarApellidosFocusLost
+
+    private void cmbTipoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmbTipoKeyPressed
+        // TODO add your handling code here:
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            cmbTienda.requestFocus();
+           
+        }
+    }//GEN-LAST:event_cmbTipoKeyPressed
+
+    private void cmbTiendaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmbTiendaKeyPressed
+        // TODO add your handling code here:
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            btnRegistrar.requestFocus();
+           btnRegistrar.doClick();
+        }
+    }//GEN-LAST:event_cmbTiendaKeyPressed
+
+    private void txtBuscarApellidosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarApellidosKeyPressed
+        // TODO add your handling code here:
+        try {
+            setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+            DefaultTableModel tabla_Temporal;
+            String apellidos = txtBuscarApellidos.getText();
+            UsuarioBD oUsuarioBD = new UsuarioBD();
+           
+             tabla_Temporal = oUsuarioBD.buscarUsuario(apellidos);
+            Tabla_Reporte_Usuario.setModel(tabla_Temporal);
+            
+            int canLista = tabla_Temporal.getRowCount();
+            txtCantidad.setText(""+canLista);
+             
+             setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        } catch (Exception ex) {
+             setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+             ex.printStackTrace();
+        }
+    }//GEN-LAST:event_txtBuscarApellidosKeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

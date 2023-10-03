@@ -28,6 +28,7 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jToolBar1 = new javax.swing.JToolBar();
         btnProducto = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JToolBar.Separator();
@@ -48,18 +49,28 @@ public class Menu extends javax.swing.JFrame {
         menu_Item_TipoUsuario = new javax.swing.JMenuItem();
         menu_Item_Usuario = new javax.swing.JMenuItem();
         menu_Item_Turno = new javax.swing.JMenuItem();
+        menu_Item_Laboratorio = new javax.swing.JMenuItem();
+        menu_Item_Categoria = new javax.swing.JMenuItem();
+        menu_Item_Medida = new javax.swing.JMenuItem();
+        menu_Item_Producto = new javax.swing.JMenuItem();
+        menu_Item_Composicion = new javax.swing.JMenuItem();
         menu_compras = new javax.swing.JMenu();
         menu_inventario = new javax.swing.JMenu();
         menu_ventas = new javax.swing.JMenu();
         menu_caja = new javax.swing.JMenu();
 
+        jLabel1.setText("jLabel1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("EMPRESA X| CONECTADO COMO:ADMINISTRADOR-USUARIO: LORENA PEÑA-FARMACIA PRINCIPAL");
         setExtendedState(6);
 
         jToolBar1.setBackground(new java.awt.Color(153, 204, 255));
         jToolBar1.setForeground(new java.awt.Color(204, 255, 255));
         jToolBar1.setRollover(true);
 
+        btnProducto.setBackground(new java.awt.Color(242, 242, 242));
+        btnProducto.setForeground(new java.awt.Color(242, 242, 242));
         btnProducto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/box.png"))); // NOI18N
         btnProducto.setEnabled(false);
         btnProducto.setFocusable(false);
@@ -68,33 +79,45 @@ public class Menu extends javax.swing.JFrame {
         jToolBar1.add(btnProducto);
         jToolBar1.add(jSeparator2);
 
+        btnCompras.setBackground(new java.awt.Color(204, 255, 255));
+        btnCompras.setForeground(new java.awt.Color(204, 255, 255));
         btnCompras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/compra.png"))); // NOI18N
         btnCompras.setEnabled(false);
         jToolBar1.add(btnCompras);
         jToolBar1.add(jSeparator1);
 
+        btnIngresos.setBackground(new java.awt.Color(204, 255, 255));
+        btnIngresos.setForeground(new java.awt.Color(204, 255, 255));
         btnIngresos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ingresos.png"))); // NOI18N
         btnIngresos.setEnabled(false);
         jToolBar1.add(btnIngresos);
         jToolBar1.add(jSeparator3);
 
+        btnEgresos.setBackground(new java.awt.Color(204, 255, 255));
         btnEgresos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/egresos.png"))); // NOI18N
         btnEgresos.setEnabled(false);
         jToolBar1.add(btnEgresos);
         jToolBar1.add(jSeparator4);
 
+        btnVentas.setBackground(new java.awt.Color(204, 255, 255));
         btnVentas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cart.png"))); // NOI18N
         btnVentas.setEnabled(false);
         jToolBar1.add(btnVentas);
         jToolBar1.add(jSeparator5);
 
+        btnCajas.setBackground(new java.awt.Color(204, 255, 255));
+        btnCajas.setForeground(new java.awt.Color(204, 255, 255));
         btnCajas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/caja_1.png"))); // NOI18N
         btnCajas.setEnabled(false);
         jToolBar1.add(btnCajas);
         jToolBar1.add(jSeparator6);
 
+        btnCerrar.setBackground(new java.awt.Color(204, 255, 255));
+        btnCerrar.setForeground(new java.awt.Color(204, 255, 255));
         btnCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cerrar2.png"))); // NOI18N
         jToolBar1.add(btnCerrar);
+
+        escritorio.setBackground(new java.awt.Color(204, 255, 255));
 
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
         escritorio.setLayout(escritorioLayout);
@@ -104,7 +127,7 @@ public class Menu extends javax.swing.JFrame {
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 337, Short.MAX_VALUE)
+            .addGap(0, 416, Short.MAX_VALUE)
         );
 
         menu_mantenimiento.setText("MANTENIMIENTO");
@@ -133,6 +156,46 @@ public class Menu extends javax.swing.JFrame {
         });
         menu_mantenimiento.add(menu_Item_Turno);
 
+        menu_Item_Laboratorio.setText("Laboratorio");
+        menu_Item_Laboratorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_Item_LaboratorioActionPerformed(evt);
+            }
+        });
+        menu_mantenimiento.add(menu_Item_Laboratorio);
+
+        menu_Item_Categoria.setText("Categoría");
+        menu_Item_Categoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_Item_CategoriaActionPerformed(evt);
+            }
+        });
+        menu_mantenimiento.add(menu_Item_Categoria);
+
+        menu_Item_Medida.setText("Medida");
+        menu_Item_Medida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_Item_MedidaActionPerformed(evt);
+            }
+        });
+        menu_mantenimiento.add(menu_Item_Medida);
+
+        menu_Item_Producto.setText("Producto");
+        menu_Item_Producto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_Item_ProductoActionPerformed(evt);
+            }
+        });
+        menu_mantenimiento.add(menu_Item_Producto);
+
+        menu_Item_Composicion.setText("Composición");
+        menu_Item_Composicion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_Item_ComposicionActionPerformed(evt);
+            }
+        });
+        menu_mantenimiento.add(menu_Item_Composicion);
+
         jMenuBar1.add(menu_mantenimiento);
 
         menu_compras.setText("COMPRAS");
@@ -157,9 +220,9 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 707, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jToolBar1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 881, Short.MAX_VALUE)
                     .addComponent(escritorio))
                 .addContainerGap())
         );
@@ -210,6 +273,62 @@ public class Menu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_menu_Item_TurnoActionPerformed
 
+    private void menu_Item_LaboratorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_Item_LaboratorioActionPerformed
+        // TODO add your handling code here:
+        Marca_IU frame = new Marca_IU();
+        escritorio.add(frame);
+        Dimension desktopSize = escritorio.getSize();
+        Dimension FrameSize = frame.getSize();
+        frame.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height) / 2);
+
+        frame.show();
+
+    }//GEN-LAST:event_menu_Item_LaboratorioActionPerformed
+
+    private void menu_Item_CategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_Item_CategoriaActionPerformed
+        // TODO add your handling code here:
+        Categoria_IU frame = new Categoria_IU();
+        escritorio.add(frame);
+        Dimension desktopSize = escritorio.getSize();
+        Dimension FrameSize = frame.getSize();
+        frame.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height) / 2);
+
+        frame.show();
+    }//GEN-LAST:event_menu_Item_CategoriaActionPerformed
+
+    private void menu_Item_MedidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_Item_MedidaActionPerformed
+        // TODO add your handling code here:
+        Medida_IU frame = new Medida_IU();
+        escritorio.add(frame);
+        Dimension desktopSize = escritorio.getSize();
+        Dimension FrameSize = frame.getSize();
+        frame.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height) / 2);
+
+        frame.show();
+    }//GEN-LAST:event_menu_Item_MedidaActionPerformed
+
+    private void menu_Item_ProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_Item_ProductoActionPerformed
+        // TODO add your handling code here:
+        Producto_IU frame = new Producto_IU();
+        escritorio.add(frame);
+        Dimension desktopSize = escritorio.getSize();
+        Dimension FrameSize = frame.getSize();
+        frame.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height) / 2);
+
+        frame.show();
+    }//GEN-LAST:event_menu_Item_ProductoActionPerformed
+
+    private void menu_Item_ComposicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_Item_ComposicionActionPerformed
+        // TODO add your handling code here:
+        Composicion_IU frame = new Composicion_IU();
+        escritorio.add(frame);
+        Dimension desktopSize = escritorio.getSize();
+        Dimension FrameSize = frame.getSize();
+        frame.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height) / 2);
+
+        frame.show();
+    }//GEN-LAST:event_menu_Item_ComposicionActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -254,6 +373,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton btnProducto;
     private javax.swing.JLabel btnVentas;
     public static javax.swing.JDesktopPane escritorio;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar.Separator jSeparator2;
@@ -262,6 +382,11 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JToolBar.Separator jSeparator5;
     private javax.swing.JToolBar.Separator jSeparator6;
     private javax.swing.JToolBar jToolBar1;
+    private javax.swing.JMenuItem menu_Item_Categoria;
+    private javax.swing.JMenuItem menu_Item_Composicion;
+    private javax.swing.JMenuItem menu_Item_Laboratorio;
+    private javax.swing.JMenuItem menu_Item_Medida;
+    private javax.swing.JMenuItem menu_Item_Producto;
     private javax.swing.JMenuItem menu_Item_TipoUsuario;
     private javax.swing.JMenuItem menu_Item_Turno;
     private javax.swing.JMenuItem menu_Item_Usuario;
