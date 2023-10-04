@@ -138,6 +138,11 @@ public class Turno_IU extends javax.swing.JInternalFrame {
                 btnBuscarActionPerformed(evt);
             }
         });
+        btnBuscar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnBuscarKeyPressed(evt);
+            }
+        });
 
         jLabel2.setText("USUARIO");
 
@@ -218,6 +223,11 @@ public class Turno_IU extends javax.swing.JInternalFrame {
         jLabel5.setText("TURNO");
 
         cmbTurno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar turno", "TURNO1", "TURNO2", "TURNO3", "TURNO4" }));
+        cmbTurno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                cmbTurnoKeyPressed(evt);
+            }
+        });
 
         btnRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/guardar.png"))); // NOI18N
         btnRegistrar.setText("REGISTRAR");
@@ -457,7 +467,8 @@ public class Turno_IU extends javax.swing.JInternalFrame {
     private void txtDniKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDniKeyPressed
         // TODO add your handling code here:
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txtHoraInicio.requestFocus();
+            btnBuscar.requestFocus();
+            btnBuscar.doClick();
         }
     }//GEN-LAST:event_txtDniKeyPressed
 
@@ -491,8 +502,8 @@ public class Turno_IU extends javax.swing.JInternalFrame {
     private void txtHoraFinalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtHoraFinalKeyPressed
         // TODO add your handling code here:
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            btnRegistrar.requestFocus();
-            btnRegistrar.doClick();
+            cmbTurno.requestFocus();
+
         }
     }//GEN-LAST:event_txtHoraFinalKeyPressed
 
@@ -508,8 +519,24 @@ public class Turno_IU extends javax.swing.JInternalFrame {
 
     private void btnRegistrarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnRegistrarKeyPressed
         // TODO add your handling code here:
-       
+
     }//GEN-LAST:event_btnRegistrarKeyPressed
+
+    private void btnBuscarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnBuscarKeyPressed
+        // TODO add your handling code here:
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            txtHoraInicio.requestFocus();
+        }
+    }//GEN-LAST:event_btnBuscarKeyPressed
+
+    private void cmbTurnoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmbTurnoKeyPressed
+        // TODO add your handling code here:
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            btnRegistrar.requestFocus();
+            btnRegistrar.doClick();
+        }
+
+    }//GEN-LAST:event_cmbTurnoKeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

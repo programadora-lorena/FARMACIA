@@ -710,9 +710,10 @@ public class Usuario_IU extends javax.swing.JInternalFrame {
 
     private void txtApellidosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidosKeyTyped
         // TODO add your handling code here:
-         if (!(Character.isLetter(evt.getKeyChar()))) {
+       char validar = evt.getKeyChar();
+        if (Character.isDigit(validar)) {
+            getToolkit().beep();
             evt.consume();
-            
         }
     }//GEN-LAST:event_txtApellidosKeyTyped
 

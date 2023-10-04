@@ -12,7 +12,7 @@ import CapaNegocio.CategoriaBD;
 import CapaNegocio.MarcaBD;
 import CapaNegocio.MedidaBD;
 import CapaNegocio.ProductoBD;
-import static CapaPresentacion.Menu.escritorio;
+import static CapaPresentacion.Menu_IU.escritorio;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ItemEvent;
