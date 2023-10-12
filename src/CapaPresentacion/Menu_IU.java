@@ -54,7 +54,11 @@ public class Menu_IU extends javax.swing.JFrame {
         menu_Item_Medida = new javax.swing.JMenuItem();
         menu_Item_Producto = new javax.swing.JMenuItem();
         menu_Item_Composicion = new javax.swing.JMenuItem();
+        menu_Item_Proveedor = new javax.swing.JMenuItem();
+        menu_Item_Cuentas_Bancarias = new javax.swing.JMenuItem();
         menu_compras = new javax.swing.JMenu();
+        menu_Item_Realizar_Compras = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         menu_inventario = new javax.swing.JMenu();
         menu_ventas = new javax.swing.JMenu();
         menu_caja = new javax.swing.JMenu();
@@ -219,10 +223,42 @@ public class Menu_IU extends javax.swing.JFrame {
         });
         menu_mantenimiento.add(menu_Item_Composicion);
 
+        menu_Item_Proveedor.setText("Proveedor");
+        menu_Item_Proveedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_Item_ProveedorActionPerformed(evt);
+            }
+        });
+        menu_mantenimiento.add(menu_Item_Proveedor);
+
+        menu_Item_Cuentas_Bancarias.setText("Cuentas Bancarias");
+        menu_Item_Cuentas_Bancarias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_Item_Cuentas_BancariasActionPerformed(evt);
+            }
+        });
+        menu_mantenimiento.add(menu_Item_Cuentas_Bancarias);
+
         jMenuBar1.add(menu_mantenimiento);
 
         menu_compras.setText("COMPRAS");
-        menu_compras.setEnabled(false);
+
+        menu_Item_Realizar_Compras.setText("Realizar Compras");
+        menu_Item_Realizar_Compras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_Item_Realizar_ComprasActionPerformed(evt);
+            }
+        });
+        menu_compras.add(menu_Item_Realizar_Compras);
+
+        jMenuItem1.setText("Reporte de compras varios");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        menu_compras.add(jMenuItem1);
+
         jMenuBar1.add(menu_compras);
 
         menu_inventario.setText("INVENTARIO");
@@ -372,6 +408,49 @@ public class Menu_IU extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnCerrarActionPerformed
 
+    private void menu_Item_ProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_Item_ProveedorActionPerformed
+        // TODO add your handling code here:
+        Proveedor_IU frame = new Proveedor_IU();
+        escritorio.add(frame);
+        Dimension desktopSize = escritorio.getSize();
+        Dimension FrameSize = frame.getSize();
+        frame.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height) / 2);
+
+        frame.show();
+    }//GEN-LAST:event_menu_Item_ProveedorActionPerformed
+
+    private void menu_Item_Cuentas_BancariasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_Item_Cuentas_BancariasActionPerformed
+        // TODO add your handling code here:
+        CuentasBancariasProveedor_IU frame = new CuentasBancariasProveedor_IU();
+        escritorio.add(frame);
+        Dimension desktopSize = escritorio.getSize();
+        Dimension FrameSize = frame.getSize();
+        frame.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height) / 2);
+
+        frame.show();
+    }//GEN-LAST:event_menu_Item_Cuentas_BancariasActionPerformed
+
+    private void menu_Item_Realizar_ComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_Item_Realizar_ComprasActionPerformed
+        // TODO add your handling code here:
+        Compra_IU frame = new Compra_IU();
+        escritorio.add(frame);
+        Dimension desktopSize = escritorio.getSize();
+        Dimension FrameSize = frame.getSize();
+        frame.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height) / 2);
+
+        frame.show();
+    }//GEN-LAST:event_menu_Item_Realizar_ComprasActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+             ReporteComprasVarios_IU frame = new ReporteComprasVarios_IU();
+        escritorio.add(frame);
+        Dimension desktopSize = escritorio.getSize();
+        Dimension FrameSize = frame.getSize();
+        frame.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height) / 2);
+
+        frame.show();   // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -419,6 +498,7 @@ public class Menu_IU extends javax.swing.JFrame {
     public static javax.swing.JDesktopPane escritorio;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar.Separator jSeparator2;
     private javax.swing.JToolBar.Separator jSeparator3;
@@ -428,9 +508,12 @@ public class Menu_IU extends javax.swing.JFrame {
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JMenuItem menu_Item_Categoria;
     private javax.swing.JMenuItem menu_Item_Composicion;
+    private javax.swing.JMenuItem menu_Item_Cuentas_Bancarias;
     private javax.swing.JMenuItem menu_Item_Laboratorio;
     private javax.swing.JMenuItem menu_Item_Medida;
     private javax.swing.JMenuItem menu_Item_Producto;
+    private javax.swing.JMenuItem menu_Item_Proveedor;
+    private javax.swing.JMenuItem menu_Item_Realizar_Compras;
     private javax.swing.JMenuItem menu_Item_TipoUsuario;
     private javax.swing.JMenuItem menu_Item_Turno;
     private javax.swing.JMenuItem menu_Item_Usuario;
